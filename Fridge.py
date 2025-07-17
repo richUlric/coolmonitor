@@ -38,9 +38,17 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.image("LOGO_2iE_AFRIQUE.jpg", width=100)
-st.title("💨 Projet Intégrateur")
+# --- En-tête avec logos à gauche et à droite ---
+col1, col2, col3 = st.columns([1, 4, 1])  # 3 colonnes : gauche, centre, droite
 
+with col1:
+    st.image("LOGO_2iE_AFRIQUE.jpg", width=100)
+
+with col2:
+    st.title("💨 Projet Intégrateur - CoolMonitor")
+
+with col3:
+    st.image("ChatGPT Image Jul 17, 2025, 08_39_42 PM.png", width=100)
 # --- Paramètres personnalisables ---
 st.sidebar.header("⚙️ Paramètres")
 seuil_temp = st.sidebar.slider("Seuil de température (alertes)", 10, 50, 30)
